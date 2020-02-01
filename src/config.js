@@ -19,7 +19,7 @@ export const players = {
     },
     crom: {
         name: 'Crom',
-        // avatar: '/images/players/crom.png',
+        avatar: '/images/players/crom.png',
         race: 'Human',
         class: 'Barbarian'
     }
