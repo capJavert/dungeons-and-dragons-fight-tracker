@@ -99,12 +99,9 @@ const App = () => {
     const { DM } = state
 
     return (
-        <div style={{
-            display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', background: '#000000'
-        }}
-        >
-            <div style={{ position: 'relative' }}>
-                <img style={{ width: '100%', height: 'auto' }} src={map} alt="Map" />
+        <div style={styles.app}>
+            <div style={styles.container}>
+                <img style={styles.map} src={map} alt="Map" />
                 {Object.keys(state.players).map((key) => {
                     const player = state.players[key]
 
