@@ -25,7 +25,7 @@ const defaultState = {
 
 const App = () => {
     const [state, setState] = useState(defaultState)
-    const [selected, setSelected] = useState(0)
+    const [selected, setSelected] = useState()
     const { map, autosave } = useMemo(() => {
         const url = new URL(window.location.href)
 
@@ -47,6 +47,10 @@ const App = () => {
     }, [map])
 
     useEffect(() => {
+        if (!selected) {
+            return undefined
+        }
+
         const player = {
             ...state.players[selected]
         }
