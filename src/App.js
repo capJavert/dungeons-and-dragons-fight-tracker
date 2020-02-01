@@ -97,6 +97,7 @@ const App = () => {
     }, [selected, map, autosave, state])
 
     const { DM } = state
+    const selectedPlayer = state.players[selected]
 
     return (
         <div style={styles.app}>
@@ -147,8 +148,12 @@ const App = () => {
                             style={styles.DMAvatar}
                             src={DM.avatar ? DM.avatar : undefined}
                             alt={DM.name}
+                            title={DM.name}
                         />
                     </div>
+                )}
+                {!!selectedPlayer && (
+                    <div style={styles.selectedTooltip}>{selectedPlayer.name}</div>
                 )}
             </div>
         </div>

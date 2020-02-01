@@ -40,5 +40,14 @@ export default {
         boxSizing: 'border-box',
         border: `${playerBorderWidth}px solid #000000`
     },
-    selectedPlayer: 'yellow'
+    selectedPlayer: 'yellow',
+    selectedTooltip: {
+        position: 'absolute',
+        top: -20,
+        right: 10,
+        fontSize: 16,
+        fontWeight: 'bold',
+        fontFamily: 'Arial, sans-serif',
+        color: '#ffffff'
+    }
 }
